@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: k8s-present
-        image: jupiter.local:5000/k8s-present:0.0.1
+        image: jupiter.local:5000/k8s-present:0.0.2
         ports:
         - containerPort: 3999
 ---
