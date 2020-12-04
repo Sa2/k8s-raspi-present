@@ -271,3 +271,43 @@ CoreDNSはサービスディスカバリの役割を持つ
 - CalicoとかはAMD64しか対応してないという記事をどこかで見た
 
 * k8sクラスターを起動（Worker）
+
+先述の kubeadm init のログに出てきた kubeadm join ... を各ノードで実行する
+
+kubeadm がいい感じにmasterへ接続してくれる
+
+完了後に kubectl get nodes を叩いてみる
+
+.image image/kubectl-get-nodes.png
+
+*k8sクラスター完成！*
+
+* と思うじゃん？
+
+- k8s外に出すときNodePort形式じゃないといけない。Service単位でプライベートIPを持たせたい
+- コンテナレジストリどうする？
+- DBどうしよう？
+
+結構足りないものが多い
+
+* その後にやったこと
+
+* 
+
+- k8s外に出すときNodePort形式じゃないといけない。Service単位でプライベートIPを持たせたい
+→ LoadBalancerを
+- コンテナレジストリどうする？
+- DBどうしよう？
+
+
+
+
+* LoadBalancerを入れる
+
+Serviceを公開するときに *NodePort* 、 *LoadBalancer* 、 *ExternalName* を選べるが
+
+
+
+LoadBalancerとして *MetalLB* を入れる
+
+* 

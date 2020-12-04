@@ -13,13 +13,13 @@ jupiter jazz (k8sクラスタ)　で動かす場合はarmプロセッサ上で�
 アーキテクチャが違うのはやっぱり痛い
 
 ```
-$ docker build -t k8s-present:0.0.1 .
+$ docker build -t k8s-present .
 ```
 
 ## run for development
 
 ```
-$ docker run -v /Users/Sa2/go/src/github.com/Sa2/k8s-raspi-present:/go/src/app -it --rm -p 3999:3999 --name k8s-present k8s-present:0.0.1
+$ docker run -v $HOME/go/src/github.com/Sa2/k8s-raspi-present:/go/src/app -it --rm -p 3999:3999 --name k8s-present k8s-present:latest
 
 $ present -http 0.0.0.0:3999
 ```
