@@ -33,9 +33,9 @@ $ docker run -it --rm -p 3999:3999 --name k8s-present k8s-present
 ## publish for private registry
 
 ```
-$ docker build -t jupiter.local:5000/k8s-present:0.0.2 .
+$ docker build -t jupiter.local:5000/k8s-present:0.0.3 .
 
-$ docker push jupiter.local:5000/k8s-present:0.0.2
+$ docker push jupiter.local:5000/k8s-present:0.0.3
 
 $ kubectl apply -f k8s-deployment.yaml
 ```
